@@ -72,6 +72,7 @@ GameManager.prototype.addRandomTile = function () {
     var value = 2;
     if (dice>2) value = value*2;
     if (dice>3) value = value*2;
+    if (dice>3.95) value = 7;
     var tile = new Tile(this.grid.randomAvailableCell(), value);
 
     this.grid.insertTile(tile);
